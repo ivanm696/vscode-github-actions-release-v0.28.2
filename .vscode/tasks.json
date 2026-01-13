@@ -1,0 +1,28 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "watch",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": ["$ts-webpack-watch"]
+    },
+    {
+      "label": "delay",
+      "type": "shell",
+      "command": "sleep 5",
+      "windows": {
+        "command": "ping 127.0.0.1 -n 5 > nul"
+      },
+      "group": "none",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated",
+        "close": true
+      }
+    }
+  ]
+}
